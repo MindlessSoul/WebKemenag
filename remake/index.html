@@ -100,8 +100,18 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-    <img src="assets/img/opening.png" alt="Opening Image">
-  </section><!-- End Hero -->
+    <div class="hero-container">
+      <img src="assets/img/squares.svg" alt="Squares" class="squares">
+      <img src="assets/img/base.svg" alt="Base" class="base">
+      <img src="assets/img/slidelabel.svg" alt="Slide Label" class="slide-label">
+      <img src="assets/img/gedung.png" alt="Gedung" class="gedung">
+      <img src="assets/img/loginbutton.svg" alt="Login Button" class="login-button">
+    </div>
+  </section>
+  
+
+
+  <!-- End Hero -->
 
   <main id="main">
 
@@ -150,7 +160,7 @@ KABUPATEN SEKADAU Masa Kerja Tahun 2022-2027
       </div>
     </section><!-- End Featured Services Section -->
 
-<!-- ======= About Us Section ======= -->
+<!-- About Us Section -->
 <section id="about" class="about">
   <div class="container">
     <div class="section-title">
@@ -161,24 +171,31 @@ KABUPATEN SEKADAU Masa Kerja Tahun 2022-2027
     <div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="carousel-image-wrapper">
-            <img src="assets/img/visimisi.jpg" class="carousel-image" alt="Visi dan Misi">
-          </div>
+          <img src="assets/img/visimisi.jpg" class="carousel-img" alt="Visi dan Misi">
         </div>
         <div class="carousel-item">
-          <div class="carousel-image-wrapper">
-            <img src="assets/img/tolakpungli1.jpg" class="carousel-image" alt="Tolak Pungli 1">
-          </div>
+          <img src="assets/img/tolakpungli1.jpg" class="carousel-img" alt="Tolak Pungli 1">
         </div>
         <div class="carousel-item">
-          <div class="carousel-image-wrapper">
-            <img src="assets/img/tolakpungli2.jpg" class="carousel-image" alt="Tolak Pungli 2">
-          </div>
+          <img src="assets/img/tolakpungli2.jpg" class="carousel-img" alt="Tolak Pungli 2">
         </div>
         <div class="carousel-item">
-          <div class="carousel-image-wrapper">
-            <img src="assets/img/nogratifikasi.png" class="carousel-image" alt="No Gratifikasi">
-          </div>
+          <img src="assets/img/nogratifikasi.png" class="carousel-img" alt="No Gratifikasi">
+        </div>
+        <div class="carousel-item">
+          <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="carousel-img" alt="Kantor Kementerian Agama 1">
+        </div>
+        <div class="carousel-item">
+          <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="carousel-img" alt="Kantor Kementerian Agama 2">
+        </div>
+        <div class="carousel-item">
+          <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="carousel-img" alt="Kantor Kementerian Agama 3">
+        </div>
+        <div class="carousel-item">
+          <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="carousel-img" alt="Kantor Kementerian Agama 4">
+        </div>
+        <div class="carousel-item">
+          <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="carousel-img" alt="Kantor Kementerian Agama 5">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
@@ -191,14 +208,32 @@ KABUPATEN SEKADAU Masa Kerja Tahun 2022-2027
       </button>
     </div>
 
-    <div class="carousel-thumbnails">
-      <img src="assets/img/visimisi.jpg" class="thumbnail-image" data-bs-target="#aboutCarousel" data-bs-slide-to="0" alt="Visi dan Misi">
-      <img src="assets/img/tolakpungli1.jpg" class="thumbnail-image" data-bs-target="#aboutCarousel" data-bs-slide-to="1" alt="Tolak Pungli 1">
-      <img src="assets/img/tolakpungli2.jpg" class="thumbnail-image" data-bs-target="#aboutCarousel" data-bs-slide-to="2" alt="Tolak Pungli 2">
-      <img src="assets/img/nogratifikasi.png" class="thumbnail-image" data-bs-target="#aboutCarousel" data-bs-slide-to="3" alt="No Gratifikasi">
+    <div class="thumbnail-container">
+      <button class="thumbnail-control-prev" type="button">
+        <span class="thumbnail-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <div class="thumbnail-slider">
+        <img src="assets/img/visimisi.jpg" class="img-thumbnail" alt="Visi dan Misi" data-bs-target="#aboutCarousel" data-bs-slide-to="0">
+        <img src="assets/img/tolakpungli1.jpg" class="img-thumbnail" alt="Tolak Pungli 1" data-bs-target="#aboutCarousel" data-bs-slide-to="1">
+        <img src="assets/img/tolakpungli2.jpg" class="img-thumbnail" alt="Tolak Pungli 2" data-bs-target="#aboutCarousel" data-bs-slide-to="2">
+        <img src="assets/img/nogratifikasi.png" class="img-thumbnail" alt="No Gratifikasi" data-bs-target="#aboutCarousel" data-bs-slide-to="3">
+        <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="img-thumbnail" alt="Kantor Kementerian Agama 1" data-bs-target="#aboutCarousel" data-bs-slide-to="4">
+        <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="img-thumbnail" alt="Kantor Kementerian Agama 2" data-bs-target="#aboutCarousel" data-bs-slide-to="5">
+        <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="img-thumbnail" alt="Kantor Kementerian Agama 3" data-bs-target="#aboutCarousel" data-bs-slide-to="6">
+        <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="img-thumbnail" alt="Kantor Kementerian Agama 4" data-bs-target="#aboutCarousel" data-bs-slide-to="7">
+        <img src="/mnt/data/A_professional_banner_image_for_a_carousel_in_a_we.png" class="img-thumbnail" alt="Kantor Kementerian Agama 5" data-bs-target="#aboutCarousel" data-bs-slide-to="8">
+      </div>
+      <button class="thumbnail-control-next" type="button">
+        <span class="thumbnail-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
-</section><!-- End About Us Section -->
+</section>
+<!-- End About Us Section -->
+
+
 
 
 

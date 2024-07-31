@@ -78,25 +78,7 @@
     })
   }
 
-  /**
-   * Header fixed top on scroll
-   */
-  let selectHeader = select('#header')
-  if (selectHeader) {
-    let headerOffset = selectHeader.offsetTop
-    let nextElement = selectHeader.nextElementSibling
-    const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 0) {
-        selectHeader.classList.add('fixed-top')
-        nextElement.classList.add('scrolled-offset')
-      } else {
-        selectHeader.classList.remove('fixed-top')
-        nextElement.classList.remove('scrolled-offset')
-      }
-    }
-    window.addEventListener('load', headerFixed)
-    onscroll(document, headerFixed)
-  }
+
 
   /**
    * Back to top button
@@ -260,6 +242,49 @@
       type: 'bullets',
       clickable: true
     }
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const thumbnailContainer = document.querySelector('.thumbnail-container .thumbnail-slider');
+    const prevButton = document.querySelector('.thumbnail-container .thumbnail-control-prev');
+    const nextButton = document.querySelector('.thumbnail-container .thumbnail-control-next');
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    thumbnailContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      thumbnailContainer.classList.add('active');
+      startX = e.pageX - thumbnailContainer.offsetLeft;
+      scrollLeft = thumbnailContainer.scrollLeft;
+    });
+
+    thumbnailContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+      thumbnailContainer.classList.remove('active');
+    });
+
+    thumbnailContainer.addEventListener('mouseup', () => {
+      isDown = false;
+      thumbnailContainer.classList.remove('active');
+    });
+
+    thumbnailContainer.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - thumbnailContainer.offsetLeft;
+      const walk = (x - startX) * 3; // scroll-fast
+      thumbnailContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    prevButton.addEventListener('click', () => {
+      thumbnailContainer.scrollBy({ left: -180, behavior: 'smooth' });
+    });
+
+    nextButton.addEventListener('click', () => {
+      thumbnailContainer.scrollBy({ left: 180, behavior: 'smooth' });
+    });
   });
 
 })()
